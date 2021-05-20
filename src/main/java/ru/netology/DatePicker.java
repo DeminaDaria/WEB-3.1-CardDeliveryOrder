@@ -8,4 +8,9 @@ public class DatePicker {
         LocalDate date = LocalDate.now().plusDays(3);
         return date.format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
     }
+
+    public String dateCalendar2 () {
+        LocalDate date = LocalDate.now().plusDays(2);
+        return date.format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
+    }
 }
