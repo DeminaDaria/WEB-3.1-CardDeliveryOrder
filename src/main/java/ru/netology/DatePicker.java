@@ -1,15 +1,11 @@
 package ru.netology;
 
-
-import java.util.Calendar;
-import java.util.Date;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class DatePicker {
-    public static Date addDays (Date date, int days) {
-        Calendar cal = Calendar.getInstance();
-        cal.setTime(date);
-        cal.add(Calendar.DATE, days);
-        return cal.getTime();
+    public String dateCalendar () {
+        LocalDate date = LocalDate.now().plusDays(3);
+        return date.format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
     }
-
 }
